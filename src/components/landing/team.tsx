@@ -20,7 +20,7 @@ const teamMembers = [
   {
     name: "Debosmita Banerjee",
     role: "UI/UX Designer",
-    image: "",
+    image: "https://i.postimg.cc/rsh5RRDy/Whats-App-Image-2025-07-09-at-01-49-01-cb2794ac.jpg",
     initials: "DB",
     links: {
       mail: "mailto:banerjeedebosmita501@gmail.com",
@@ -31,7 +31,7 @@ const teamMembers = [
   {
     name: "Kumaresh Pradhan",
     role: "Back End Engineer",
-    image: "",
+    image: "https://i.postimg.cc/c6qQ0y20/Whats-App-Image-2025-07-09-at-06-47-53-7aea1bdc.jpg",
     initials: "KP",
     links: {
       mail: "mailto:kumareshpradhan4@gmail.com",
@@ -59,7 +59,7 @@ export function Team() {
               <CardHeader className="items-center text-center">
                 <Avatar className="h-24 w-24 mb-4">
                   {member.image ? (
-                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarImage src={member.image} alt={member.name} className="object-cover" />
                   ) : (
                     <AvatarFallback className="text-4xl font-headline">
                       {member.initials}
