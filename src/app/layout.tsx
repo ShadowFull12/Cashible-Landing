@@ -7,18 +7,18 @@ export const metadata: Metadata = {
   description: 'Take control of your finances with Cashible, the ultimate modern finance tracking app designed for India. Manage expenses, create budgets, and achieve your financial goals with ease. Sign up today!',
   keywords: 'Cashible, finance tracker, budget app, expense manager, personal finance India, money management, financial goals, savings app',
   icons: {
-    icon: 'https://i.postimg.cc/GhKqC9zp/cashible-logo.png',
+    icon: 'https://i.postimg.cc/GpqYbGPp/cashible-logo.png',
   },
   openGraph: {
     title: 'Cashible - Modern Finance Tracker for India',
     description: 'The ultimate modern finance tracking app designed for India. Manage expenses, create budgets, and achieve your financial goals with ease.',
-    images: [{ url: 'https://i.postimg.cc/GhKqC9zp/cashible-logo.png' }]
+    images: [{ url: 'https://i.postimg.cc/GpqYbGPp/cashible-logo.png' }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cashible - Modern Finance Tracker for India',
     description: 'The ultimate modern finance tracking app designed for India. Manage expenses, create budgets, and achieve your financial goals with ease.',
-    images: ['https://i.postimg.cc/GhKqC9zp/cashible-logo.png'],
+    images: ['https://i.postimg.cc/GpqYbGPp/cashible-logo.png'],
   },
 };
 
