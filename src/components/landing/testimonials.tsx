@@ -107,8 +107,6 @@ export function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-2 md:left-0 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
-          <CarouselNext className="absolute right-2 md:right-0 md:translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
         </Carousel>
       </div>
     </section>
