@@ -59,7 +59,7 @@ export function Team() {
               <CardHeader className="items-center text-center">
                 <Avatar className="h-24 w-24 mb-4">
                   {member.image ? (
-                    <AvatarImage src={member.image} alt={member.name} className={member.name === "Kumaresh Pradhan" ? "object-cover object-bottom" : "object-cover"} />
+                    <AvatarImage src={member.image} alt={member.name} className={member.name === "Kumaresh Pradhan" ? "object-cover object-top" : "object-cover"} />
                   ) : (
                     <AvatarFallback className="text-4xl font-headline">
                       {member.initials}
