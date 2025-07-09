@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cashible - Modern Finance Tracker for India',
     description: 'The ultimate modern finance tracking app designed for India. Manage expenses, create budgets, and achieve your financial goals with ease.',
-    images: [{ url: 'https://i.postimg.cc/ZqxtCkPY/PNGLogo.png' }]
+    images: [{ url: 'https://i.postimg.cc/GhKqC9zp/cashible-logo.png' }]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cashible - Modern Finance Tracker for India',
     description: 'The ultimate modern finance tracking app designed for India. Manage expenses, create budgets, and achieve your financial goals with ease.',
-    images: ['https://i.postimg.cc/ZqxtCkPY/PNGLogo.png'],
+    images: ['https://i.postimg.cc/GhKqC9zp/cashible-logo.png'],
   },
 };
 

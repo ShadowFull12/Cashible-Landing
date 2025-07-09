@@ -37,11 +37,11 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="group flex items-center gap-3">
           <Image
-            src="https://i.postimg.cc/ZqxtCkPY/PNGLogo.png"
+            src="https://i.postimg.cc/GhKqC9zp/cashible-logo.png"
             alt="Cashible Logo"
-            width={48}
-            height={48}
-            className="h-12 w-12"
+            width={56}
+            height={56}
+            className="h-14 w-14"
           />
           <span className="text-xl font-bold font-headline text-white">
             Cashible
@@ -76,11 +76,11 @@ export function Header() {
                 <SheetClose asChild>
                     <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
                     <Image
-                        src="https://i.postimg.cc/ZqxtCkPY/PNGLogo.png"
+                        src="https://i.postimg.cc/GhKqC9zp/cashible-logo.png"
                         alt="Cashible Logo"
-                        width={32}
-                        height={32}
-                        className="h-8 w-8"
+                        width={40}
+                        height={40}
+                        className="h-10 w-10"
                         />
                     <span className="text-white">Cashible</span>
                     </Link>

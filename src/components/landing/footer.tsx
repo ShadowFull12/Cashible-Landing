@@ -20,11 +20,11 @@ export function Footer() {
         <div className="flex flex-col items-center gap-4 md:items-end">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="https://i.postimg.cc/ZqxtCkPY/PNGLogo.png"
+              src="https://i.postimg.cc/GhKqC9zp/cashible-logo.png"
               alt="Cashible Logo"
-              width={32}
-              height={32}
-              className="h-8 w-8"
+              width={40}
+              height={40}
+              className="h-10 w-10"
             />
             <span className="text-xl font-bold font-headline text-white">
               Cashible
