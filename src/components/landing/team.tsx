@@ -24,7 +24,7 @@ const teamMembers = [
     initials: "DB",
     links: {
       mail: "mailto:banerjeedebosmita501@gmail.com",
-      github: "",
+      github: "https://github.com/Debosmita-14",
       linkedin: "https://www.linkedin.com/in/debosmita-banerjee-a73182325/",
     },
   },

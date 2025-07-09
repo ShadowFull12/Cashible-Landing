@@ -76,7 +76,7 @@ export function Features() {
           plugins={[
             Autoplay({
               delay: 2000,
-              stopOnInteraction: true,
+              stopOnInteraction: false,
               stopOnMouseEnter: true,
             }),
           ]}
@@ -123,7 +123,7 @@ export function Features() {
             plugins={[
               Autoplay({
                 delay: 2500,
-                stopOnInteraction: true,
+                stopOnInteraction: false,
                 stopOnMouseEnter: true,
               }),
             ]}

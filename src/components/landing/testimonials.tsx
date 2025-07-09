@@ -75,7 +75,7 @@ export function Testimonials() {
           plugins={[
             Autoplay({
               delay: 2500,
-              stopOnInteraction: true,
+              stopOnInteraction: false,
               stopOnMouseEnter: true,
             }),
           ]}
