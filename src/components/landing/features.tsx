@@ -106,8 +106,8 @@ export function Features() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
-          <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
+          <CarouselPrevious className="absolute left-2 md:left-0 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
+          <CarouselNext className="absolute right-2 md:right-0 md:translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
         </Carousel>
 
         <div className="mt-24 text-center">
@@ -155,8 +155,8 @@ export function Features() {
                 </div>
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
+            <CarouselPrevious className="absolute left-2 md:left-0 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
+            <CarouselNext className="absolute right-2 md:right-0 md:translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
           </Carousel>
         </div>
 
