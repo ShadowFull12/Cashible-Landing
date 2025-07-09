@@ -58,11 +58,11 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="testimonials" className="w-full py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tighter md:text-5xl">Loved by Users Across India</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl/relaxed">
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Loved by Users Across India</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl/relaxed">
             See what our customers have to say about their journey to financial wellness with Cashible.
           </p>
         </div>

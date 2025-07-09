@@ -45,11 +45,11 @@ export function Team() {
   const placeholdersCount = Math.max(0, 3 - teamMembers.length);
 
   return (
-    <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-background/50">
+    <section id="team" className="w-full py-16 md:py-24 lg:py-32 bg-background/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tighter md:text-5xl">Meet the Team</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl/relaxed">
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Meet the Team</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl/relaxed">
             The passionate minds behind Cashible, dedicated to simplifying your financial life.
           </p>
         </div>

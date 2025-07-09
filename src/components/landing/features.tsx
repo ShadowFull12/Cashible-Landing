@@ -60,11 +60,11 @@ const moreFeatures = [
 
 export function Features() {
   return (
-    <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-background/50">
+    <section id="features" className="w-full py-16 md:py-24 lg:py-32 bg-background/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tighter md:text-5xl">Why You'll Love Cashible</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl/relaxed">
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Why You'll Love Cashible</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl/relaxed">
             Everything you need for financial clarity and success, all in one app.
           </p>
         </div>
@@ -106,13 +106,13 @@ export function Features() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-md hover:bg-primary/20"/>
-          <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-md hover:bg-primary/20"/>
+          <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
+          <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
         </Carousel>
 
         <div className="mt-24 text-center">
           <h3 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl">...And it doesn't end there...</h3>
-          <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed">
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl/relaxed">
             Cashible is packed with even more powerful features designed to give you complete financial control and a personalized experience.
           </p>
           <Carousel
@@ -160,7 +160,7 @@ export function Features() {
 
         <div className="mt-24 text-center border-t border-border/50 pt-16">
           <h3 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl">Available on Android</h3>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl/relaxed">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground md:text-xl/relaxed">
             Take control of your finances on the go. Download the latest release from our official GitHub repository.
           </p>
           <Button size="lg" asChild className="mt-8">
