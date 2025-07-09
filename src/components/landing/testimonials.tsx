@@ -1,17 +1,9 @@
 "use client";
 
 import * as React from "react";
-import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { StarRating } from "@/components/landing/StarRating";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -68,23 +60,11 @@ export function Testimonials() {
             See what our customers have to say about their journey to financial wellness with Cashible.
           </p>
         </div>
-        <Carousel
-          plugins={[
-            Autoplay({
-              delay: 4000,
-              stopOnInteraction: true,
-              stopOnMouseEnter: true,
-            }),
-          ]}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-4">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+        
+        <div className="group relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+          <div className="flex animate-marquee-slow motion-safe:group-hover:[animation-play-state:paused]">
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <div key={index} className="mx-2 flex-shrink-0 w-[300px] md:w-[400px]">
                 <div className="p-1 h-full">
                   <Card className="transform-gpu h-full bg-card/50 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
                     <CardContent className="p-6 flex flex-col h-full">
@@ -102,12 +82,10 @@ export function Testimonials() {
                     </CardHeader>
                   </Card>
                 </div>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden lg:flex" />
-          <CarouselNext className="hidden lg:flex" />
-        </Carousel>
+          </div>
+        </div>
       </div>
     </section>
   );

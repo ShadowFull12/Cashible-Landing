@@ -99,7 +99,11 @@ export default {
         'squiggly': {
           'from': { 'background-position-x': '0' },
           'to': { 'background-position-x': '-50px' },
-        }
+        },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -107,6 +111,8 @@ export default {
         'gradient-fade': 'gradient-fade 1.5s ease-in-out forwards',
         'float': 'float 6s ease-in-out infinite',
         'squiggly': 'squiggly 0.3s linear infinite',
+        marquee: 'marquee 60s linear infinite',
+        'marquee-slow': 'marquee 80s linear infinite',
       },
     },
   },
