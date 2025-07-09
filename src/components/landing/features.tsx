@@ -59,7 +59,7 @@ export function Features() {
             {features.map((feature, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="h-full overflow-hidden border-2 border-transparent bg-card/50 backdrop-blur-lg transition-all hover:border-primary/50">
+                  <Card className="transform-gpu h-full overflow-hidden border-2 border-transparent bg-card/50 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
                     <CardContent className="flex aspect-video flex-col items-center justify-center p-0">
                       <Image
                         src={feature.image}

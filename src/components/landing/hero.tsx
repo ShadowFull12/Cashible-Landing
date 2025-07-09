@@ -15,7 +15,7 @@ export function Hero() {
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button size="lg" asChild>
-            <Link href="#features">Get Started</Link>
+            <Link href="https://cashible.vercel.app/signup" target="_blank" rel="noopener noreferrer">Get Started</Link>
           </Button>
         </div>
         <div className="relative mt-16 animate-float">

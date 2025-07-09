@@ -31,7 +31,7 @@ export function Team() {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-center">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="w-full max-w-sm mx-auto bg-card/50 backdrop-blur-lg border-border">
+            <Card key={index} className="w-full max-w-sm mx-auto bg-card/50 backdrop-blur-lg border-border transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
               <CardHeader className="items-center text-center">
                 <Avatar className="h-24 w-24 mb-4">
                   {member.image ? (
@@ -60,7 +60,7 @@ export function Team() {
           ))}
           {/* Placeholder cards */}
           {[...Array(2)].map((_, index) => (
-            <Card key={`placeholder-${index}`} className="w-full max-w-sm mx-auto bg-card/50 backdrop-blur-lg border-border">
+            <Card key={`placeholder-${index}`} className="w-full max-w-sm mx-auto bg-card/50 backdrop-blur-lg border-border transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
               <CardHeader className="items-center text-center">
                 <Skeleton className="h-24 w-24 rounded-full mb-4" />
                 <Skeleton className="h-7 w-40 mb-1" />

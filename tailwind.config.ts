@@ -95,6 +95,10 @@ export default {
         'float': {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        'squiggly': {
+          'from': { 'background-position-x': '0' },
+          'to': { 'background-position-x': '-50px' },
         }
       },
       animation: {
@@ -102,6 +106,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient-fade': 'gradient-fade 1.5s ease-in-out forwards',
         'float': 'float 6s ease-in-out infinite',
+        'squiggly': 'squiggly 0.3s linear infinite',
       },
     },
   },
