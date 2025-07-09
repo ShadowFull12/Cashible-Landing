@@ -9,6 +9,7 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
 const navLinks = [
+  { href: "#hero", label: "Home" },
   { href: "#features", label: "Features" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#team", label: "Team" },

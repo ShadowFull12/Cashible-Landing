@@ -1,6 +1,17 @@
+"use client";
+
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { StarRating } from "@/components/landing/StarRating";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -24,6 +35,27 @@ const testimonials = [
     review: "As a freelancer, managing my income was a mess. Cashible brought so much clarity. The UI is beautiful and the insights are incredibly helpful. It's the best finance app I've used.",
     initials: "AR",
   },
+  {
+    name: "Vikram Singh",
+    location: "Delhi, DL",
+    rating: 5,
+    review: "The 'Spend Circles' feature is genius for splitting bills with my roommates. It takes all the awkwardness out of asking for money. The app is slick and works flawlessly.",
+    initials: "VS",
+  },
+  {
+    name: "Sneha Iyer",
+    location: "Chennai, TN",
+    rating: 4.5,
+    review: "I love the detailed reports and graphs. It's so motivating to see my savings grow month after month. Cashible is a powerful tool for financial planning.",
+    initials: "SI",
+  },
+  {
+    name: "Aditya Kumar",
+    location: "Kolkata, WB",
+    rating: 5,
+    review: "I've tried many expense trackers, but Cashible is by far the most intuitive. The UI is clean, and the AI category suggestions are surprisingly accurate. 10/10!",
+    initials: "AK",
+  }
 ];
 
 export function Testimonials() {
@@ -36,25 +68,46 @@ export function Testimonials() {
             See what our customers have to say about their journey to financial wellness with Cashible.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="transform-gpu bg-card/50 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
-              <CardContent className="p-6">
-                <StarRating rating={testimonial.rating} />
-                <p className="mt-4 text-foreground/90">"{testimonial.review}"</p>
-              </CardContent>
-              <CardHeader className="flex flex-row items-center gap-4 pt-0">
-                <Avatar>
-                  <AvatarFallback>{testimonial.initials}</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+        <Carousel
+          plugins={[
+            Autoplay({
+              delay: 4000,
+              stopOnInteraction: true,
+              stopOnMouseEnter: true,
+            }),
+          ]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="p-1 h-full">
+                  <Card className="transform-gpu h-full bg-card/50 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <StarRating rating={testimonial.rating} />
+                      <p className="mt-4 text-foreground/90 flex-grow">"{testimonial.review}"</p>
+                    </CardContent>
+                    <CardHeader className="flex flex-row items-center gap-4 pt-0 mt-auto">
+                      <Avatar>
+                        <AvatarFallback>{testimonial.initials}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <p className="font-semibold">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                      </div>
+                    </CardHeader>
+                  </Card>
                 </div>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden lg:flex" />
+          <CarouselNext className="hidden lg:flex" />
+        </Carousel>
       </div>
     </section>
   );

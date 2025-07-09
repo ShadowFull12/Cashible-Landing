@@ -2,6 +2,7 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import Autoplay from "embla-carousel-autoplay"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -72,12 +73,19 @@ export function Features() {
             align: "center",
             loop: true,
           }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+              stopOnInteraction: true,
+              stopOnMouseEnter: true,
+            }),
+          ]}
           className="w-full"
         >
           <CarouselContent className="-ml-4">
             {features.map((feature, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
+                <div className="p-1 h-full">
                   <Card className="transform-gpu h-full overflow-hidden border-2 border-transparent bg-card/50 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
                     <CardContent className="flex aspect-video flex-col items-center justify-center p-0">
                       <Image
@@ -107,24 +115,49 @@ export function Features() {
           <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed">
             Cashible is packed with even more powerful features designed to give you complete financial control and a personalized experience.
           </p>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {moreFeatures.map((feature, index) => (
-              <div key={index} className="flex flex-col items-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
-                <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
-                  <feature.icon className="h-8 w-8" />
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+             plugins={[
+              Autoplay({
+                delay: 2500,
+                stopOnInteraction: true,
+                stopOnMouseEnter: true,
+              }),
+            ]}
+            className="w-full mt-12"
+          >
+            <CarouselContent className="-ml-4">
+              {moreFeatures.map((feature, index) => (
+                <CarouselItem key={index} className="pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                   <div className="p-1 h-full">
+                    <div className="flex h-full flex-col items-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
+                      <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
+                        <feature.icon className="h-8 w-8" />
+                      </div>
+                      <h4 className="font-headline text-xl font-semibold">{feature.text}</h4>
+                      <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+              <CarouselItem className="pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <div className="p-1 h-full">
+                  <div className="flex h-full flex-col items-center justify-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
+                    <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
+                      <Sparkles className="h-8 w-8" />
+                    </div>
+                    <h4 className="font-headline text-xl font-semibold">And Much More</h4>
+                    <p className="mt-2 text-sm text-muted-foreground">We're constantly adding new features to make Cashible the ultimate finance app.</p>
+                  </div>
                 </div>
-                <h4 className="font-headline text-xl font-semibold">{feature.text}</h4>
-                <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
-             <div className="flex flex-col items-center justify-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
-                <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
-                  <Sparkles className="h-8 w-8" />
-                </div>
-                <h4 className="font-headline text-xl font-semibold">And Much More</h4>
-                <p className="mt-2 text-sm text-muted-foreground">We're constantly adding new features to make Cashible the ultimate finance app.</p>
-              </div>
-          </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-md hover:bg-primary/20"/>
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-md hover:bg-primary/20"/>
+          </Carousel>
         </div>
 
         <div className="mt-24 text-center border-t border-border/50 pt-16">
