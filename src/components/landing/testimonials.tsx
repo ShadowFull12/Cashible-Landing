@@ -7,6 +7,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { StarRating } from "@/components/landing/StarRating";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -104,6 +106,8 @@ export function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
+          <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-12 w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 hidden md:flex"/>
         </Carousel>
       </div>
     </section>

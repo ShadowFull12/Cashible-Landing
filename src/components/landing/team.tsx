@@ -20,7 +20,7 @@ const teamMembers = [
   {
     name: "Debosmita Banerjee",
     role: "UI/UX Designer",
-    image: "https://i.postimg.cc/rsh5RRDy/Whats-App-Image-2025-07-09-at-01-49-01-cb2794ac.jpg",
+    image: "https://i.postimg.cc/xT4cwqtK/Whats-App-Image-2025-07-09-at-21-14-03-c7ce2324.jpg",
     initials: "DB",
     links: {
       mail: "mailto:banerjeedebosmita501@gmail.com",
