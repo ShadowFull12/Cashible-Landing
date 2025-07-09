@@ -1,7 +1,13 @@
 "use client";
 
 import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import { StarRating } from "@/components/landing/StarRating";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
@@ -61,17 +67,26 @@ export function Testimonials() {
           </p>
         </div>
         
-        <div className="group relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-          <div className="flex animate-marquee-slow motion-safe:group-hover:[animation-play-state:paused]">
-            {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <div key={index} className="mx-2 flex-shrink-0 w-[300px] md:w-[400px]">
-                <div className="p-1 h-full">
-                  <Card className="transform-gpu h-full bg-card/50 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <StarRating rating={testimonial.rating} />
-                      <p className="mt-4 text-foreground/90 flex-grow">"{testimonial.review}"</p>
-                    </CardContent>
-                    <CardHeader className="flex flex-row items-center gap-4 pt-0 mt-auto">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2500,
+              stopOnInteraction: true,
+              stopOnMouseEnter: true,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                 <div className="p-1 h-full">
+                  <Card className="transform-gpu h-full bg-card/50 backdrop-blur-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 flex flex-col">
+                    <CardHeader className="flex flex-row items-center gap-4">
                       <Avatar>
                         <AvatarFallback>{testimonial.initials}</AvatarFallback>
                       </Avatar>
@@ -80,12 +95,16 @@ export function Testimonials() {
                         <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                       </div>
                     </CardHeader>
+                    <CardContent className="flex-grow p-6 pt-0">
+                      <StarRating rating={testimonial.rating} />
+                      <p className="mt-4 text-foreground/90">"{testimonial.review}"</p>
+                    </CardContent>
                   </Card>
                 </div>
-              </div>
+              </CarouselItem>
             ))}
-          </div>
-        </div>
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
