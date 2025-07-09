@@ -1,6 +1,7 @@
 "use client"
 import * as React from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -10,6 +11,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Button } from "@/components/ui/button"
+import { BrainCircuit, FileText, Repeat, Users, Palette, LayoutDashboard, Spline, Github, Sparkles } from "lucide-react"
 
 const features = [
   {
@@ -42,6 +45,16 @@ const features = [
     image: "https://i.postimg.cc/Z5qkqd1M/image-2025-07-09-193928250.png",
     hint: "settings screen"
   },
+];
+
+const moreFeatures = [
+  { icon: BrainCircuit, text: "AI Integrations", description: "Get smart category suggestions and in-depth data summaries." },
+  { icon: FileText, text: "Monthly Reports", description: "Generate and export detailed monthly financial reports." },
+  { icon: Repeat, text: "Recurring Payments", description: "Automate and manage your repeating bills and subscriptions." },
+  { icon: Users, text: "Social Spend Circles", description: "Easily manage group expenses with friends and roommates." },
+  { icon: Palette, text: "Multiple Themes", description: "Personalize your app experience with multiple accent colors." },
+  { icon: LayoutDashboard, text: "Modern Dashboard", description: "Visualize your finances with a clean and intuitive interface." },
+  { icon: Spline, text: "Split Payments", description: "Settle up shared costs for trips, rent, or dinners effortlessly." },
 ];
 
 export function Features() {
@@ -88,6 +101,45 @@ export function Features() {
           <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-md hover:bg-primary/20"/>
           <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 h-14 w-14 bg-background/50 backdrop-blur-md hover:bg-primary/20"/>
         </Carousel>
+
+        <div className="mt-24 text-center">
+          <h3 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl">...And it doesn't end there...</h3>
+          <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl/relaxed">
+            Cashible is packed with even more powerful features designed to give you complete financial control and a personalized experience.
+          </p>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {moreFeatures.map((feature, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
+                <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
+                  <feature.icon className="h-8 w-8" />
+                </div>
+                <h4 className="font-headline text-xl font-semibold">{feature.text}</h4>
+                <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+             <div className="flex flex-col items-center justify-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
+                <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
+                  <Sparkles className="h-8 w-8" />
+                </div>
+                <h4 className="font-headline text-xl font-semibold">And Much More</h4>
+                <p className="mt-2 text-sm text-muted-foreground">We're constantly adding new features to make Cashible the ultimate finance app.</p>
+              </div>
+          </div>
+        </div>
+
+        <div className="mt-24 text-center border-t border-border/50 pt-16">
+          <h3 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl">Available on Android</h3>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl/relaxed">
+            Take control of your finances on the go. Download the latest release from our official GitHub repository.
+          </p>
+          <Button size="lg" asChild className="mt-8">
+            <Link href="https://github.com/ShadowFull12/Cashible-App/releases" target="_blank" rel="noopener noreferrer">
+              <Github className="h-5 w-5" />
+              Download from GitHub
+            </Link>
+          </Button>
+        </div>
+
       </div>
     </section>
   )
