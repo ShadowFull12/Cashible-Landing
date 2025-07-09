@@ -59,6 +59,15 @@ const moreFeatures = [
 ];
 
 export function Features() {
+  const allDisplayFeatures = [
+    ...moreFeatures,
+    {
+      icon: Sparkles,
+      text: "And Much More",
+      description: "We're constantly adding new features to make Cashible the ultimate finance app.",
+    },
+  ];
+
   return (
     <section id="features" className="w-full py-16 md:py-24 lg:py-32 bg-background/50">
       <div className="container mx-auto px-4 md:px-6">
@@ -115,24 +124,10 @@ export function Features() {
           <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground md:text-xl/relaxed">
             Cashible is packed with even more powerful features designed to give you complete financial control and a personalized experience.
           </p>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 2500,
-                stopOnInteraction: false,
-                stopOnMouseEnter: true,
-              }),
-            ]}
-            className="w-full mt-12"
-          >
-            <CarouselContent className="-ml-4">
-              {moreFeatures.map((feature, index) => (
-                <CarouselItem key={`more-${index}`} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="p-1 h-full">
+          <div className="relative mt-12 w-full overflow-hidden">
+            <div className="flex animate-marquee motion-safe:hover:[animation-play-state:paused] [animation-duration:60s]">
+              {[...allDisplayFeatures, ...allDisplayFeatures].map((feature, index) => (
+                <div key={`more-${index}`} className="shrink-0 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 p-2">
                     <div className="flex h-full flex-col items-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
                       <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
                         <feature.icon className="h-8 w-8" />
@@ -140,24 +135,10 @@ export function Features() {
                       <h4 className="font-headline text-xl font-semibold">{feature.text}</h4>
                       <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
-              <CarouselItem className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="p-1 h-full">
-                  <div className="flex h-full flex-col items-center justify-center text-center p-6 rounded-lg bg-card/50 backdrop-blur-lg border border-border/50 transform-gpu transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10">
-                    <div className="mb-4 rounded-full bg-primary/10 p-4 text-primary">
-                      <Sparkles className="h-8 w-8" />
-                    </div>
-                    <h4 className="font-headline text-xl font-semibold">And Much More</h4>
-                    <p className="mt-2 text-sm text-muted-foreground">We're constantly adding new features to make Cashible the ultimate finance app.</p>
-                  </div>
                 </div>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious className="absolute left-2 md:left-0 md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
-            <CarouselNext className="absolute right-2 md:right-0 md:translate-x-1/2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 md:h-12 md:w-12 bg-background/50 backdrop-blur-md hover:bg-primary/20 flex"/>
-          </Carousel>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-24 text-center border-t border-border/50 pt-16">
