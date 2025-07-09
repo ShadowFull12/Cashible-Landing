@@ -19,13 +19,24 @@ const teamMembers = [
   },
   {
     name: "Debosmita Banerjee",
-    role: "Next.js Developer",
+    role: "UI/UX Designer",
     image: "",
     initials: "DB",
     links: {
       mail: "mailto:banerjeedebosmita501@gmail.com",
       github: "",
       linkedin: "https://www.linkedin.com/in/debosmita-banerjee-a73182325/",
+    },
+  },
+  {
+    name: "Kumaresh Pradhan",
+    role: "Back End Engineer",
+    image: "",
+    initials: "KP",
+    links: {
+      mail: "mailto:kumareshpradhan4@gmail.com",
+      github: "https://github.com/kumaresh12818",
+      linkedin: "https://www.linkedin.com/in/kumaresh-pradhan-352a01329/",
     },
   },
 ];
