@@ -13,28 +13,34 @@ import {
 
 const features = [
   {
-    title: "Unified Dashboard",
-    description: "Get a complete overview of your financial health in one place. Track your income, expenses, and investments with our intuitive dashboard.",
-    image: "https://placehold.co/800x600.png",
-    hint: "dashboard chart"
+    title: "Deep Dive Insights",
+    description: "Track your monthly and all-time financial data with stunning graphs and visualizations for a clearer picture of your spending.",
+    image: "https://i.postimg.cc/rmKThYGc/image-2025-07-09-194817187.png",
+    hint: "data analysis"
   },
   {
-    title: "Smart Budgeting",
-    description: "Create custom budgets that work for you. We'll help you stay on track with smart alerts and insights based on your spending habits.",
-    image: "https://placehold.co/800x600.png",
-    hint: "budget categories"
+    title: "Organized History",
+    description: "Keep track of your finances in a properly organized way with filters by date, amount, category, and more for ultimate control.",
+    image: "https://i.postimg.cc/RhpXgXRr/image-2025-07-09-195126460.png",
+    hint: "transaction list"
   },
   {
-    title: "Expense Tracking",
-    description: "Automatically categorize your transactions from bank accounts and credit cards. Say goodbye to manual entry and hello to clarity.",
-    image: "https://placehold.co/800x600.png",
-    hint: "expense list"
+    title: "Spend Circles",
+    description: "Manage group expenses, split payments, and track who owes whom. Perfect for roommates and travel buddies.",
+    image: "https://i.postimg.cc/fyjLM96b/image-2025-07-09-194111597.png",
+    hint: "social finance"
   },
   {
-    title: "Investment Portfolio",
-    description: "Monitor your stocks, mutual funds, and other investments in real-time. Make informed decisions with our powerful analytics.",
-    image: "https://placehold.co/800x600.png",
-    hint: "investment portfolio"
+    title: "Financial Calendar",
+    description: "Stay on top of your bills and recurring payments with a full-fledged financial calendar. Never miss a due date again.",
+    image: "https://i.postimg.cc/X7yz26TQ/image-2025-07-09-195300197.png",
+    hint: "calendar schedule"
+  },
+  {
+    title: "Total Customization",
+    description: "Tailor Cashible to your needs. Edit spending categories, manage account details, and set up recurring expenses with ease.",
+    image: "https://i.postimg.cc/Z5qkqd1M/image-2025-07-09-193928250.png",
+    hint: "settings screen"
   },
 ];
 

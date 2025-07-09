@@ -29,13 +29,13 @@ export function Hero() {
         <div className="relative mt-16 animate-float">
           <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
           <Image 
-            src="https://placehold.co/1200x600.png"
-            alt="Cashible App Mockup"
+            src="https://i.postimg.cc/ZqrWKXkH/image-2025-07-09-193839917.png"
+            alt="Cashible App Dashboard"
             width={1200}
             height={600}
             priority
             className="relative rounded-2xl border border-primary/20 shadow-2xl shadow-primary/20"
-            data-ai-hint="app mockup finance"
+            data-ai-hint="app dashboard"
           />
         </div>
       </div>
