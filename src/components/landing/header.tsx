@@ -43,14 +43,9 @@ export function Header() {
             height={48}
             className="h-12 w-12"
           />
-          <div className="relative">
-            <span className="text-xl font-bold font-headline text-gradient bg-gradient-to-br from-cyan-400 to-cyan-600">
-              Cashible
-            </span>
-            <div className="absolute -bottom-1 left-0 h-2 w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <div className="h-full w-full animate-squiggly underline-squiggly" />
-            </div>
-          </div>
+          <span className="text-xl font-bold font-headline text-white">
+            Cashible
+          </span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
@@ -87,7 +82,7 @@ export function Header() {
                         height={32}
                         className="h-8 w-8"
                         />
-                    <span className="text-gradient bg-gradient-to-br from-cyan-400 to-cyan-600">Cashible</span>
+                    <span className="text-white">Cashible</span>
                     </Link>
                 </SheetClose>
                 {navLinks.map((link) => (

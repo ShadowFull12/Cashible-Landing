@@ -6,6 +6,14 @@ export function Hero() {
   return (
     <section id="hero" className="container mx-auto px-4 py-24 text-center md:py-32 lg:py-40">
       <div className="animate-in fade-in slide-in-from-bottom-12 duration-1000 ease-in-out">
+        <div className="group relative mx-auto mb-4 w-fit">
+          <h2 className="font-headline text-6xl font-bold tracking-tighter text-gradient bg-gradient-to-br from-cyan-400 to-cyan-600 md:text-7xl lg:text-8xl">
+            Cashible
+          </h2>
+          <div className="absolute -bottom-2 left-0 h-3 w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="h-full w-full animate-squiggly underline-squiggly" />
+          </div>
+        </div>
         <h1 className="font-headline text-5xl font-bold tracking-tighter text-transparent md:text-6xl lg:text-7xl bg-clip-text bg-gradient-to-br from-white to-slate-400">
           Master Your Money, Master Your Life
         </h1>
