@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: "Aritra Mukherjee",
     role: "Front End Engineer",
-    image: "", // No image provided, will use fallback
+    image: "https://i.postimg.cc/N0GL3TRf/Whats-App-Image-2025-03-24-at-16-04-20-06283818.jpg",
     initials: "AM",
     links: {
       mail: "mailto:aritramukherjee1233@gmail.com",
@@ -59,7 +59,7 @@ export function Team() {
               <CardHeader className="items-center text-center">
                 <Avatar className="h-24 w-24 mb-4">
                   {member.image ? (
-                    <AvatarImage src={member.image} alt={member.name} className={member.name === "Kumaresh Pradhan" ? "object-cover object-top" : "object-cover"} />
+                    <AvatarImage src={member.image} alt={member.name} className={(member.name === "Kumaresh Pradhan" || member.name === "Aritra Mukherjee") ? "object-cover object-top" : "object-cover"} />
                   ) : (
                     <AvatarFallback className="text-4xl font-headline">
                       {member.initials}
