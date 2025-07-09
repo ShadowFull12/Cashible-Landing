@@ -17,9 +17,22 @@ const teamMembers = [
       linkedin: "https://www.linkedin.com/in/aritra-mukherjee-899562329/",
     },
   },
+  {
+    name: "Debosmita Banerjee",
+    role: "Next.js Developer",
+    image: "",
+    initials: "DB",
+    links: {
+      mail: "mailto:banerjeedebosmita501@gmail.com",
+      github: "",
+      linkedin: "https://www.linkedin.com/in/debosmita-banerjee-a73182325/",
+    },
+  },
 ];
 
 export function Team() {
+  const placeholdersCount = Math.max(0, 3 - teamMembers.length);
+
   return (
     <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-background/50">
       <div className="container mx-auto px-4 md:px-6">
@@ -46,20 +59,26 @@ export function Team() {
                 <p className="text-primary">{member.role}</p>
               </CardHeader>
               <CardFooter className="justify-center gap-4">
-                <Button variant="outline" size="icon" asChild>
-                  <Link href={member.links.mail} target="_blank"><Mail className="h-5 w-5" /></Link>
-                </Button>
-                <Button variant="outline" size="icon" asChild>
-                  <Link href={member.links.github} target="_blank"><Github className="h-5 w-5" /></Link>
-                </Button>
-                <Button variant="outline" size="icon" asChild>
-                  <Link href={member.links.linkedin} target="_blank"><Linkedin className="h-5 w-5" /></Link>
-                </Button>
+                {member.links.mail && (
+                  <Button variant="outline" size="icon" asChild>
+                    <Link href={member.links.mail} target="_blank"><Mail className="h-5 w-5" /></Link>
+                  </Button>
+                )}
+                {member.links.github && (
+                  <Button variant="outline" size="icon" asChild>
+                    <Link href={member.links.github} target="_blank"><Github className="h-5 w-5" /></Link>
+                  </Button>
+                )}
+                {member.links.linkedin && (
+                  <Button variant="outline" size="icon" asChild>
+                    <Link href={member.links.linkedin} target="_blank"><Linkedin className="h-5 w-5" /></Link>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
           {/* Placeholder cards */}
-          {[...Array(2)].map((_, index) => (
+          {[...Array(placeholdersCount)].map((_, index) => (
             <Card key={`placeholder-${index}`} className="w-full max-w-sm mx-auto bg-card/50 backdrop-blur-lg border-border transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
               <CardHeader className="items-center text-center">
                 <Skeleton className="h-24 w-24 rounded-full mb-4" />
